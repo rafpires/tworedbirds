@@ -1,5 +1,5 @@
 """
-WSGI config for mybakery project.
+WSGI config for two_red_birds project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mybakery.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'two_red_birds.settings')
 
 application = get_wsgi_application()

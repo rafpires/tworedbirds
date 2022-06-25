@@ -1,4 +1,4 @@
-"""mybakery URL Configuration
+"""two_red_birds URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -32,9 +32,9 @@ router.register(r'roles', RoleViewSet, basename='roles')
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Bakery APIs",
+      title="Two Red Birds APIs",
       default_version='v1',
-      description="Django demo",
+      description="A django demo",
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="rafael.andreis.pires@gmail.com"),
       license=openapi.License(name="BSD License"),

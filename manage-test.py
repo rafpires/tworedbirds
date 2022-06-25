@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mybakery.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'two_red_birds.settings')
     os.environ.setdefault('API_TEST', 'True')
     try:
         from django.core.management import execute_from_command_line
