@@ -95,6 +95,10 @@ WSGI_APPLICATION = 'two_red_birds.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 IS_API_TEST = bool(os.environ.get('API_TEST', False))
+print(f'IS_API_TEST: {IS_API_TEST}')
+print(f"POSTGRES_NAME: {os.environ.get('POSTGRES_NAME')}")
+print(f"POSTGRES_USER: {os.environ.get('POSTGRES_USER')}")
+print(f"POSTGRES_PASSWORD: {os.environ.get('POSTGRES_PASSWORD')}")
 
 if IS_API_TEST:
     DATABASES = {
@@ -107,11 +111,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'dev_tworedbirds',
-            'USER': 'dev_tworedbirds',
-            'PASSWORD': 'abc123',
-            'HOST': 'host.docker.internal',
-            'PORT': '49154',
+            'NAME': os.environ.get('POSTGRES_NAME'),
+            'USER': os.environ.get('POSTGRES_USER'),
+            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+            'HOST': 'db',
+            'PORT': 5432,
         }
     }
 
